@@ -1,3 +1,5 @@
+/* Custom Properties */
+
 :root {
   --mainColor: #eaeaea;
   --secondaryColor: #fff;
@@ -6,7 +8,13 @@
 
   --mainText: black;
   --secondaryText: #4b5156;
+
+  --color-light: #fff;
+  --color-dark: #303030;
+  --color-accent: #16e0bd;
 }
+
+/* General Styles */
 
 html,
 body {
@@ -28,20 +36,43 @@ li {
   color: var(--secondaryText);
 }
 
+/* Header */
+
 .header {
-  background-color: var(--mainColor);
-  border-bottom: 1px solid var(--borderColor);
-  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
 }
 
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+/* Hero Section */
+
+.hero {
+  background-color: var(--color-light);
+}
+
+.hero-subtitle {
+  background: var(--color-accent);
+}
+
+/* Section */
+
 .s1 {
-  background-color: var(--mainColor);
+  background-color: var(--color-light);
   border-bottom: 1px solid var(--borderColor);
   overflow: auto;
 }
 
 .s2 {
-  background-color: var(--secondaryColor);
+  background-color: var(--color-dark);
   border-bottom: 1px solid var(--borderColor);
   overflow: auto;
 }
