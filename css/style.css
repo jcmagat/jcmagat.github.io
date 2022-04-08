@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Custom Properties */
+
+:root {
+  --font-family-primary: "Source Sans Pro", sans-serif;
+  --font-family-secondary: "Source Code Pro", monospace;
+
+  --font-weight-regular: 300;
+  --font-weight-bold: 900;
+
+  --color-light: #fff;
+  --color-dark: #303030;
+  --color-accent: #16e0bd;
+
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.25rem;
+  --font-size-h3: 1.25rem;
+  --font-size-body: 1rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --font-size-h1: 4.5rem;
+    --font-size-h2: 3.75rem;
+    --font-size-h3: 1.5rem;
+    --font-size-body: 1.125rem;
+  }
+}
+
+/* General Styles */
+
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  margin: 0;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.section-title {
+  margin-bottom: 0.25em;
+}
+
+.section-title-hero {
+  font-weight: var(--font-weight-regular);
+}
+
+.section-title-hero strong {
+  display: block;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: var(--font-size-h3);
+}
+
+.section-subtitle-hero,
+.section-subtitle-about {
+  background: var(--color-accent);
+  font-family: var(--font-family-secondary);
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
