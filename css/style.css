@@ -142,8 +142,10 @@ strong {
     width: min-content;
     margin: 0 auto;
     grid-column-gap: 1em;
-    grid-template-areas: "img title" "img subtitle";
     grid-template-columns: min-content max-content;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
   }
 
   .hero-img {
@@ -153,13 +155,24 @@ strong {
     z-index: 2;
   }
 
+  .section-title-hero {
+    grid-area: title;
+  }
+
   .section-subtitle-hero {
+    grid-area: subtitle;
     align-self: start;
-    grid-column: -1 / 1;
-    grid-row: 2;
+    grid-column: 1 / -1;
     text-align: right;
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
   }
+}
+
+/* About Me Section */
+
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
 }
