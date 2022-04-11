@@ -10,7 +10,7 @@
   --font-family-primary: "Source Sans Pro", sans-serif;
   --font-family-secondary: "Source Code Pro", monospace;
 
-  --font-weight-regular: 300;
+  --font-weight-regular: 400;
   --font-weight-bold: 900;
 
   --color-light: #fff;
@@ -142,7 +142,7 @@ strong {
     width: min-content;
     margin: 0 auto;
     column-gap: 1em;
-    grid-template-columns: min-content max-content;
+    grid-template-columns: 250px max-content;
     grid-template-areas:
       "img title"
       "img subtitle";
@@ -150,7 +150,6 @@ strong {
 
   .hero-img {
     grid-area: img;
-    min-width: 250px;
     position: relative;
     z-index: 2;
   }
@@ -163,10 +162,10 @@ strong {
     grid-area: subtitle;
     align-self: start;
     grid-column: 1 / -1;
-    text-align: right;
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
+    padding-left: calc(250px + 2.5em); /* img width + column-gap + left */
   }
 }
 
@@ -175,6 +174,13 @@ strong {
 .about {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.section-subtitle-about {
+  position: relative;
+  left: -1.5em;
+  width: calc(100% + 3em);
+  padding-left: 1.5em;
 }
 
 /* Portfolio Section */
@@ -215,6 +221,7 @@ strong {
 .tags {
   list-style: none;
   padding: 0;
+  font-family: var(--font-family-secondary);
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
