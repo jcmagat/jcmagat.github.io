@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* Custom Properties */
+/* ========== Custom Properties ========== */
 
 :root {
   --font-family-primary: "Source Sans Pro", sans-serif;
@@ -35,7 +35,11 @@
   }
 }
 
-/* General Styles */
+/* ========== General Styles ========== */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--color-light);
@@ -55,7 +59,7 @@ img {
   max-width: 100%;
 }
 
-/* Typography */
+/* ========== Typography ========== */
 
 h1,
 h2,
@@ -105,7 +109,7 @@ strong {
   margin-bottom: 1em;
 }
 
-/* Header */
+/* ========== Header ========== */
 
 .header {
   display: flex;
@@ -130,26 +134,6 @@ strong {
   z-index: 100;
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
-}
-
-.nav-list {
-  list-style: none;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--color-light);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-h3);
-}
-
-.nav-link:hover {
-  color: var(--color-accent);
 }
 
 .nav-button {
@@ -193,7 +177,56 @@ strong {
   bottom: 6px;
 }
 
-@media only screen and (min-width: 900px) {
+.nav-button:hover .hamburger,
+.nav-button:hover .hamburger::before,
+.nav-button:hover .hamburger::after {
+  background: var(--color-accent);
+}
+
+/* Toggled when .nav-button is clicked */
+.nav-open .nav {
+  transform: translateX(0%);
+}
+
+.nav-open .nav-button {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  background: var(--color-light);
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  background: var(--color-light);
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+.nav-list {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-light);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h2);
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+@media (min-width: 900px) {
   .nav {
     all: unset;
   }
@@ -210,10 +243,11 @@ strong {
   .nav-link {
     color: var(--color-dark);
     font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-h3);
   }
 }
 
-/* Hero Section */
+/* ========== Hero Section ========== */
 
 .hero {
   position: relative;
@@ -260,7 +294,7 @@ strong {
   }
 }
 
-/* About Me Section */
+/* ========== About Me Section ========== */
 
 .about {
   max-width: 1000px;
@@ -274,7 +308,7 @@ strong {
   padding-left: 1.5em;
 }
 
-/* Portfolio Section */
+/* ========== Portfolio Section ========== */
 
 .portfolio {
   background-color: var(--color-dark);
