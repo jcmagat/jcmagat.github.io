@@ -23,16 +23,24 @@
   <body>
     <!-- Header -->
     <header class="header" id="home">
-      <div>
+      <div class="logo">
         <h1>&lt;juan&gt;</h1>
       </div>
 
-      <nav>
+      <button class="nav-button" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="nav">
         <ul class="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -90,7 +98,7 @@
       <h1 class="section-title section-title-portfolio">My Work</h1>
 
       <div class="portfolio-body">
-        <div class="project project-1">
+        <div class="project">
           <h2>Cirqls.app</h2>
           <p>A community-based social media</p>
           <p>
@@ -109,7 +117,7 @@
           </ul>
         </div>
 
-        <div class="project project-2">
+        <div class="project">
           <h2>JuanCarlo.me</h2>
           <p>My personal website and portfolio</p>
           <p>
