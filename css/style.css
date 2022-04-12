@@ -59,6 +59,25 @@ img {
   max-width: 100%;
 }
 
+/* ========== Buttons ========== */
+
+.button {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--color-accent);
+  color: var(--color-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  transition: transorm 250ms ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
 /* ========== Typography ========== */
 
 h1,
@@ -170,11 +189,11 @@ strong {
 }
 
 .hamburger::before {
-  top: 6px;
+  bottom: 6px;
 }
 
 .hamburger::after {
-  bottom: 6px;
+  top: 6px;
 }
 
 .nav-button:hover .hamburger,
@@ -199,7 +218,7 @@ strong {
 
 .nav-open .hamburger::before {
   background: var(--color-light);
-  transform: rotate(90deg) translateX(-6px);
+  transform: rotate(90deg) translateX(6px);
 }
 
 .nav-open .hamburger::after {
@@ -294,6 +313,52 @@ strong {
   }
 }
 
+/* ========== Skills Section ========== */
+
+.skills {
+  background-color: var(--color-dark);
+  background-image: url(../images/desk.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title-skills {
+  color: var(--color-accent);
+}
+
+.section-title-skills::after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--color-light);
+  opacity: 0.25;
+}
+
+.skills-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-bottom: 4em;
+}
+
+.skill {
+  max-width: 500px;
+}
+
+@media (min-width: 900px) {
+  .skills-body {
+    flex-direction: row;
+    max-width: 1000px;
+  }
+}
+
 /* ========== About Me Section ========== */
 
 .about {
@@ -335,12 +400,13 @@ strong {
 .portfolio-body {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
 }
 
 .project {
   background: var(--color-light);
   padding: 2em;
+  max-width: 500px;
 }
 
 .tags {
@@ -361,5 +427,23 @@ strong {
 @media (min-width: 900px) {
   .portfolio-body {
     flex-direction: row;
+    max-width: 1000px;
   }
+}
+
+/* ========== Contact Section ========== */
+
+.contact {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-body {
+  display: flex;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }

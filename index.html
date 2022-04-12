@@ -34,6 +34,9 @@
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item">
             <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -54,11 +57,44 @@
       <img class="hero-img" src="images/hero.png" alt="" />
     </section>
 
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <h1 class="section-title section-title-skills">What I do</h1>
+
+      <div class="skills-body">
+        <div class="skill">
+          <h3>Backend Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magni
+            illum excepturi non expedita laboriosam, assumenda placeat,
+            explicabo temporibus iusto optio aut consequuntur? Minima iusto odio
+            quasi facere, ipsum assumenda ab impedit voluptatum cupiditate
+            eligendi cumque sunt tenetur molestiae! Quod, assumenda vitae!
+            Expedita corporis distinctio vel fugit incidunt laudantium odit.
+          </p>
+        </div>
+
+        <div class="skill">
+          <h3>Frontend Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
+            quisquam porro dicta voluptates nisi autem ipsa ducimus aliquid
+            tempore, quod assumenda numquam blanditiis ipsam odit harum
+            architecto dolores rem enim possimus placeat maiores at delectus
+            est. Obcaecati, totam commodi? Rem perspiciatis natus quae unde
+            sapiente deleniti voluptatibus, pariatur aut magnam?
+          </p>
+        </div>
+      </div>
+
+      <a class="button" href="#portfolio">See My Work</a>
+    </section>
+
     <!-- About Me -->
     <section class="about" id="about">
       <h1 class="section-title">Who I Am</h1>
       <p class="section-subtitle section-subtitle-about">
-        A Backend Engineer based off Bay Area, CA
+        A Junior Software Engineer based off Bay Area, CA
       </p>
 
       <div class="about-body">
@@ -78,18 +114,6 @@
           mollitia. Repellendus velit maiores cupiditate quas sed, nisi iste
           blanditiis omnis, et, molestiae temporibus!
         </p>
-
-        <p>Top Skills</p>
-        <ul>
-          <li>Node</li>
-          <li>PostgreSQL</li>
-          <li>MongoDB</li>
-          <li>GraphQL</li>
-          <li>REST</li>
-          <li>AWS S3</li>
-          <li>React</li>
-          <li>Material-UI</li>
-        </ul>
       </div>
     </section>
 
@@ -137,15 +161,27 @@
 
     <!-- Contact -->
     <section class="contact" id="contact">
-      <h1 class="section-title">Contact</h1>
+      <h1 class="section-title">Get In Touch</h1>
 
       <div class="contact-body">
-        <form>
+        <div>
+          <p>
+            You can reach out to me in any of these links or you can fill out
+            this form
+          </p>
+          <ul>
+            <li>GitHub</li>
+            <li>LinkedIn</li>
+            <li>Email</li>
+          </ul>
+        </div>
+
+        <form class="contact-form">
           <label for="">Name</label>
           <input type="text" placeholder="Your name" />
           <label for="">Email</label>
           <input type="email" placeholder="Your email address" />
-          <label for="">Content</label>
+          <label for="">Message</label>
           <input type="text" placeholder="What you want to say" />
         </form>
       </div>
