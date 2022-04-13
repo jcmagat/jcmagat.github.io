@@ -123,6 +123,18 @@ strong {
   padding: 0.25em 1.5em;
 }
 
+/* ========== Logo ========== */
+
+.logo {
+  max-width: 180px;
+}
+
+@media (min-width: 900px) {
+  .logo {
+    max-width: 200px;
+  }
+}
+
 /* ========== Header ========== */
 
 .header {
@@ -131,10 +143,6 @@ strong {
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-}
-
-.logo {
-  max-width: 100px;
 }
 
 .nav {
@@ -494,5 +502,5 @@ strong {
 /* ========== Footer ========== */
 
 .footer {
-  padding: 0 1em 2em;
+  padding: 0 1em 1em;
 }
