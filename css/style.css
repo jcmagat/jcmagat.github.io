@@ -420,6 +420,23 @@ strong {
   transform: scale(1.05);
 }
 
+.project-links {
+  list-style: none;
+  padding: 0;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+}
+
+.project-link:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
 .tags {
   list-style: none;
   padding: 0;
