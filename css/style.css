@@ -432,9 +432,16 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.project-link span {
+  padding-left: 0.25em;
+}
+
 .project-link:hover {
-  text-decoration: underline;
   color: var(--color-accent);
+}
+
+.project-link:hover span {
+  text-decoration: underline;
 }
 
 .tags {
