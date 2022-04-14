@@ -440,6 +440,7 @@ strong {
   color: var(--color-accent);
 }
 
+.project-link:hover h2,
 .project-link:hover span {
   text-decoration: underline;
 }
