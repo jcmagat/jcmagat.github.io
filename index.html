@@ -129,7 +129,7 @@
       <div class="portfolio-body">
         <div class="project">
           <a
-            class="project-link"
+            class="project-title-link"
             href="https://www.cirqls.app/"
             target="_blank"
             rel="noopener noreferrer"
@@ -185,7 +185,7 @@
         </div>
 
         <div class="project">
-          <a class="project-link" href="https://juanc.dev/">
+          <a class="project-title-link" href="https://juanc.dev/">
             <h2>juanc.dev</h2>
           </a>
           <p>My personal website and portfolio</p>
@@ -227,61 +227,24 @@
       </p>
 
       <div class="contact-body">
-        <form class="contact1-form validate-form">
-          <div
-            class="wrap-input1 validate-input"
-            data-validate="Name is required"
-          >
-            <input class="input1" type="text" name="name" placeholder="Name" />
-            <span class="shadow-input1"></span>
-          </div>
+        <form class="contact-form">
+          <input type="text" name="name" placeholder="Name" required />
 
-          <div
-            class="wrap-input1 validate-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
-            <input
-              class="input1"
-              type="text"
-              name="email"
-              placeholder="Email"
-            />
-            <span class="shadow-input1"></span>
-          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            required
+          />
 
-          <div
-            class="wrap-input1 validate-input"
-            data-validate="Subject is required"
-          >
-            <input
-              class="input1"
-              type="text"
-              name="subject"
-              placeholder="Subject"
-            />
-            <span class="shadow-input1"></span>
-          </div>
+          <textarea
+            name="message"
+            placeholder="What you want to say"
+            rows="6"
+            required
+          ></textarea>
 
-          <div
-            class="wrap-input1 validate-input"
-            data-validate="Message is required"
-          >
-            <textarea
-              class="input1"
-              name="message"
-              placeholder="Message"
-            ></textarea>
-            <span class="shadow-input1"></span>
-          </div>
-
-          <div class="container-contact1-form-btn">
-            <button class="contact1-form-btn">
-              <span>
-                Submit
-                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
+          <input type="submit" value="Send" />
         </form>
 
         <div class="contact-links">

@@ -420,6 +420,16 @@ strong {
   transform: scale(1.05);
 }
 
+.project-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.project-title-link:hover {
+  color: var(--color-accent);
+}
+
 .project-links {
   list-style: none;
   padding: 0;
@@ -440,7 +450,6 @@ strong {
   color: var(--color-accent);
 }
 
-.project-link:hover h2,
 .project-link:hover span {
   text-decoration: underline;
 }
@@ -483,6 +492,7 @@ strong {
 .contact-form {
   display: flex;
   flex-direction: column;
+  gap: 0.5em;
 }
 
 .contact-links {
