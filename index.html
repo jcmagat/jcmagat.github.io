@@ -228,32 +228,43 @@
 
       <div class="contact-body">
         <form class="contact-form">
-          <label class="contact-label" for="name">Name:</label>
-          <input
-            class="contact-input"
-            id="name"
-            type="text"
-            name="name"
-            required
-          />
+          <div class="contact-input-container">
+            <label class="contact-label" for="name">Name:</label>
+            <input
+              class="contact-input"
+              id="name"
+              type="text"
+              name="name"
+              required
+            />
+            <span class="contact-warning">Please provide your name</span>
+          </div>
 
-          <label class="contact-label" for="email">Email Address:</label>
-          <input
-            class="contact-input"
-            id="email"
-            type="email"
-            name="email"
-            required
-          />
+          <div class="contact-input-container">
+            <label class="contact-label" for="email">Email Address:</label>
+            <input
+              class="contact-input"
+              id="email"
+              type="email"
+              name="email"
+              required
+            />
+            <span class="contact-warning"
+              >Please provide your email address</span
+            >
+          </div>
 
-          <label class="contact-label" for="message">Message:</label>
-          <textarea
-            class="contact-input"
-            id="message"
-            name="message"
-            rows="8"
-            required
-          ></textarea>
+          <div class="contact-input-container">
+            <label class="contact-label" for="message">Message:</label>
+            <textarea
+              class="contact-input"
+              id="message"
+              name="message"
+              rows="8"
+              required
+            ></textarea>
+            <span class="contact-warning">Please leave a message</span>
+          </div>
 
           <input
             class="button contact-submit"
