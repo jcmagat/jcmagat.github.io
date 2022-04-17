@@ -64,6 +64,7 @@ img {
 .button {
   display: inline-block;
   padding: 0.5em 2.5em;
+  border-radius: 0px;
   background: var(--color-accent);
   color: var(--color-dark);
   text-decoration: none;
@@ -509,6 +510,7 @@ strong {
   resize: none;
   padding: 0.75em;
   border: 1px solid var(--color-dark);
+  border-radius: 0px;
 }
 
 .contact-input:focus {
