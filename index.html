@@ -228,23 +228,38 @@
 
       <div class="contact-body">
         <form class="contact-form">
-          <input type="text" name="name" placeholder="Name" required />
-
+          <label class="contact-label" for="name">Name:</label>
           <input
-            type="email"
-            name="email"
-            placeholder="Email address"
+            class="contact-input"
+            id="name"
+            type="text"
+            name="name"
             required
           />
 
+          <label class="contact-label" for="email">Email Address:</label>
+          <input
+            class="contact-input"
+            id="email"
+            type="email"
+            name="email"
+            required
+          />
+
+          <label class="contact-label" for="message">Message:</label>
           <textarea
+            class="contact-input"
+            id="message"
             name="message"
-            placeholder="What you want to say"
-            rows="6"
+            rows="8"
             required
           ></textarea>
 
-          <input type="submit" value="Send" />
+          <input
+            class="button contact-submit"
+            type="submit"
+            value="Send Message"
+          />
         </form>
 
         <div class="contact-links">

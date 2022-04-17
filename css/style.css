@@ -492,7 +492,27 @@ strong {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+}
+
+.contact-label {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.25em;
+}
+
+.contact-input {
+  resize: none;
+  padding: 0.75em;
+  margin-bottom: 1em;
+}
+
+.contact-input:focus {
+  outline-color: var(--color-accent);
+}
+
+.contact-submit {
+  border: none;
+  padding: 0.75em;
+  margin-top: 2em;
 }
 
 .contact-links {
@@ -532,6 +552,13 @@ strong {
 .email:hover,
 .social-link:hover {
   color: var(--color-accent);
+}
+
+@media (min-width: 600px) {
+  .contact-submit {
+    align-self: center;
+    width: calc(600px - 4em); /* 600px - section padding */
+  }
 }
 
 /* ========== Footer ========== */
