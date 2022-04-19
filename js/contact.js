@@ -11,7 +11,7 @@ $(".contact-form").submit(function (event) {
     success: function (response) {
       if (response.result == "success") {
         $(".contact-form")[0].reset();
-        alert("Thank you for reaching out");
+        document.body.classList.add("modal-open");
       } else {
         alert("Something went wrong, please try again");
       }

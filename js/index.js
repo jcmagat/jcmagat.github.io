@@ -26,7 +26,19 @@ contactInputs.forEach((input) => {
 });
 
 contactInputs.forEach((input) => {
-  input.addEventListener("focus", () => {
-    input.parentElement.classList.remove("contact-input-invalid");
+  ["focus", "input"].forEach((event) => {
+    input.addEventListener(event, () => {
+      input.parentElement.classList.remove("contact-input-invalid");
+    });
+  });
+});
+
+/* ========== Contact Confirmation Modal ========== */
+
+const closeButtons = document.querySelectorAll(".modal-close");
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    document.body.classList.remove("modal-open");
   });
 });
