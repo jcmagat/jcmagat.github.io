@@ -1,3 +1,8 @@
+/* ========== Send Message and Open Confirmation Modal ========== */
+
+const title = document.querySelector(".contact-confirmation-title");
+const body = document.querySelector(".contact-confirmation-body");
+
 $(".contact-form").submit(function (event) {
   event.preventDefault();
 
@@ -11,13 +16,56 @@ $(".contact-form").submit(function (event) {
     success: function (response) {
       if (response.result == "success") {
         $(".contact-form")[0].reset();
+
+        title.innerHTML = "Message sent";
+        body.innerHTML =
+          "Thank you for reaching out, I'll get back to you as soon as possible";
+
         document.body.classList.add("modal-open");
       } else {
-        alert("Something went wrong, please try again");
+        title.innerHTML = "Something went wrong";
+        body.innerHTML =
+          "Please try to send the message again or reach out through any of my contacts below";
+
+        document.body.classList.add("modal-open");
       }
     },
     error: function () {
-      alert("Something went wrong, please try again");
+      title.innerHTML = "Something went wrong";
+      body.innerHTML =
+        "Please try to send the message again or reach out through any of my contacts below";
+
+      document.body.classList.add("modal-open");
     },
+  });
+});
+
+/* ========== Close Confirmation Modal ========== */
+
+const closeButtons = document.querySelectorAll(".modal-close");
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    document.body.classList.remove("modal-open");
+  });
+});
+
+/* ========== Display Input Validation Error ========== */
+
+const contactInputs = document.querySelectorAll(".contact-input");
+
+contactInputs.forEach((input) => {
+  input.addEventListener("invalid", (event) => {
+    event.preventDefault();
+
+    input.parentElement.classList.add("contact-input-invalid");
+  });
+});
+
+contactInputs.forEach((input) => {
+  ["focus", "input"].forEach((event) => {
+    input.addEventListener(event, () => {
+      input.parentElement.classList.remove("contact-input-invalid");
+    });
   });
 });
