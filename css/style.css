@@ -506,23 +506,28 @@ strong {
 }
 
 .contact-confirmation {
-  position: relative;
   background: var(--color-light);
   box-shadow: var(--box-shadow);
-  width: 400px;
-  height: 150px;
-  padding: 1.5em 2em;
-  margin: 20% auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 2em 2em 5em;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .contact-confirmation-close {
-  background: var(--color-light);
   border: none;
+  cursor: pointer;
+  background: var(--color-light);
+  color: var(--color-dark);
   font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
+  padding: 0.5em 0.75em;
   position: absolute;
-  top: 0.25em;
-  right: 0.25em;
+  top: 0;
+  right: 0;
 }
 
 .contact-confirmation-close:hover {
@@ -533,7 +538,6 @@ strong {
   position: absolute;
   bottom: 1em;
   right: 1em;
-  padding: 0.25em 1em;
 }
 
 .contact-form {
