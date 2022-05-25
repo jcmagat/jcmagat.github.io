@@ -317,52 +317,6 @@ strong {
   }
 }
 
-/* ========== Skills Section ========== */
-
-.skills {
-  background-color: var(--color-dark);
-  background-image: url(../images/desk.jpg);
-  background-size: cover;
-  background-blend-mode: multiply;
-  color: var(--color-light);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.section-title-skills {
-  color: var(--color-accent);
-}
-
-.section-title-skills::after {
-  content: "";
-  display: block;
-  width: 2em;
-  height: 1px;
-  margin: 0.5em auto 1em;
-  background: var(--color-light);
-  opacity: 0.25;
-}
-
-.skills-body {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  margin-bottom: 4em;
-}
-
-.skill {
-  max-width: 500px;
-}
-
-@media (min-width: 900px) {
-  .skills-body {
-    flex-direction: row;
-    max-width: 1000px;
-  }
-}
-
 /* ========== About Me Section ========== */
 
 .about {
