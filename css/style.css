@@ -274,6 +274,7 @@ strong {
 
 .hero {
   position: relative;
+  padding-bottom: 10em;
 }
 
 .hero-img {
