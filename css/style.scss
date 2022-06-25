@@ -359,6 +359,7 @@ strong {
 }
 
 .portfolio-body {
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -367,68 +368,82 @@ strong {
 .project {
   background: var(--color-light);
   padding: 2em;
-  max-width: 500px;
   box-shadow: var(--box-shadow);
   transition: transform 200ms ease-in-out;
+  display: grid;
+  grid-template-columns: fit-content 250px;
+  grid-template-areas:
+    "title img"
+    "links img"
+    "tags img";
 }
 
 .project:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-.project-title-link {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-}
+.project-title {
+  grid-area: title;
 
-.project-title-link:hover {
-  color: var(--color-accent);
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
 }
 
 .project-links {
+  grid-area: links;
   list-style: none;
   padding: 0;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+  }
+
+  a span {
+    padding-left: 0.25em;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  a:hover span {
+    text-decoration: underline;
+  }
 }
 
-.project-link {
-  text-decoration: none;
-  color: inherit;
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bold);
-}
-
-.project-link span {
-  padding-left: 0.25em;
-}
-
-.project-link:hover {
-  color: var(--color-accent);
-}
-
-.project-link:hover span {
-  text-decoration: underline;
-}
-
-.tags {
+.project-tags {
+  grid-area: tags;
   list-style: none;
   padding: 0;
   font-family: var(--font-family-secondary);
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
+
+  li {
+    background: var(--color-accent);
+    padding: 0.25em 1em;
+    text-align: center;
+  }
 }
 
-.tag {
-  background: var(--color-accent);
-  padding: 0.25em 1em;
-  text-align: center;
+.project-img {
+  grid-area: img;
 }
 
-@media (min-width: 900px) {
-  .portfolio-body {
-    flex-direction: row;
-    max-width: 1000px;
+@media (max-width: 900px) {
+  .project-img {
+    display: none;
   }
 }
 
