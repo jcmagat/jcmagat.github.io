@@ -438,7 +438,7 @@ strong {
   .project {
     display: grid;
     column-gap: 1em;
-    grid-template-columns: fit-content 250px;
+    grid-template-rows: auto 7em auto;
     grid-template-areas:
       "title img"
       "tags img"

@@ -496,9 +496,8 @@ strong {
     display: grid;
     -webkit-column-gap: 1em;
             column-gap: 1em;
-    -ms-grid-columns: fit-content 250px;
-        grid-template-columns: -webkit-fit-content 250px;
-        grid-template-columns: fit-content 250px;
+    -ms-grid-rows: auto 7em auto;
+        grid-template-rows: auto 7em auto;
         grid-template-areas: "title img" "tags img" "links img";
   }
   .project-title {
