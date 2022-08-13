@@ -12,3 +12,23 @@ navLinks.forEach((link) => {
     document.body.classList.remove("nav-open");
   });
 });
+
+/* ========== Project Image Zoom ========== */
+
+// Open
+const images = document.querySelectorAll(".project-img");
+
+images.forEach((image) => {
+  image.addEventListener("click", () => {
+    document.body.classList.add("project-img-zoom-open");
+  });
+});
+
+// Close
+const projectImgZoomButton = document.querySelector(
+  ".project-img-zoom-modal-button"
+);
+
+projectImgZoomButton.addEventListener("click", () => {
+  document.body.classList.remove("project-img-zoom-open");
+});

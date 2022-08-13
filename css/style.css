@@ -415,10 +415,6 @@ strong {
   padding: 2em;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,11 +422,6 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.project:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
 }
 
 .project-title a {
@@ -446,6 +437,38 @@ strong {
 .project-img {
   border: 1px solid black;
   margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.project-img-zoom-modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  display: none;
+}
+
+.project-img-zoom-open .project-img-zoom-modal {
+  display: block;
+}
+
+.project-img-zoom-modal-button {
+  position: absolute;
+  top: 0.35em;
+  right: 0.25em;
+  background: none;
+  border: none;
+  padding: 0 0.35em;
+  font-size: var(--font-size-h1);
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+.project-img-zoom-modal-button:hover {
+  color: var(--color-accent);
 }
 
 .project-tags {
@@ -511,6 +534,10 @@ strong {
     -ms-grid-column: 2;
     grid-area: img;
     margin: auto;
+  }
+  .project-img-zoom-modal-button {
+    top: 0.2em;
+    right: 0.2em;
   }
   .project-links {
     -ms-grid-row: 3;
