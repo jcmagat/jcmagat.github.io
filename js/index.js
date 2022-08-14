@@ -17,18 +17,21 @@ navLinks.forEach((link) => {
 
 // Open
 const images = document.querySelectorAll(".project-img");
+let zoomedImage = images[0];
 
 images.forEach((image) => {
   image.addEventListener("click", () => {
-    document.body.classList.add("project-img-zoom-open");
+    zoomedImage = image;
+
+    document.body.classList.add("project-img-zoom-modal-open");
+    image.classList.add("project-img-zoomed");
   });
 });
 
 // Close
-const projectImgZoomButton = document.querySelector(
-  ".project-img-zoom-modal-button"
-);
+const projectImgZoomModal = document.querySelector(".project-img-zoom-modal");
 
-projectImgZoomButton.addEventListener("click", () => {
-  document.body.classList.remove("project-img-zoom-open");
+projectImgZoomModal.addEventListener("click", () => {
+  zoomedImage.classList.remove("project-img-zoomed");
+  document.body.classList.remove("project-img-zoom-modal-open");
 });
