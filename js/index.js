@@ -16,22 +16,21 @@ navLinks.forEach((link) => {
 /* ========== Project Image Zoom ========== */
 
 // Open
+const modalImage = document.querySelector(".project-img-zoom-modal-img");
 const images = document.querySelectorAll(".project-img");
-let zoomedImage = images[0];
 
 images.forEach((image) => {
   image.addEventListener("click", () => {
-    zoomedImage = image;
-
+    modalImage.setAttribute("src", image.getAttribute("src"));
     document.body.classList.add("project-img-zoom-modal-open");
-    image.classList.add("project-img-zoomed");
   });
 });
 
 // Close
 const projectImgZoomModal = document.querySelector(".project-img-zoom-modal");
 
-projectImgZoomModal.addEventListener("click", () => {
-  zoomedImage.classList.remove("project-img-zoomed");
+projectImgZoomModal.addEventListener("click", (event) => {
+  if (event.target === modalImage) return;
+
   document.body.classList.remove("project-img-zoom-modal-open");
 });

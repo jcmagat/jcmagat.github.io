@@ -440,17 +440,22 @@ strong {
   cursor: pointer;
 }
 
-.project-img-zoomed {
-  position: fixed;
-  max-width: 80vw;
-  max-height: 80vh;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 400;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .project-img-zoom-modal {
@@ -462,6 +467,8 @@ strong {
   right: 0;
   z-index: 300;
   display: none;
+  -webkit-animation: fadeIn 0.15s linear;
+          animation: fadeIn 0.15s linear;
 }
 
 .project-img-zoom-modal-open .project-img-zoom-modal {
@@ -482,6 +489,17 @@ strong {
 
 .project-img-zoom-modal-close:hover {
   color: var(--color-accent);
+}
+
+.project-img-zoom-modal-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 80vh;
+  max-width: 80vw;
+  z-index: 400;
 }
 
 .project-tags {

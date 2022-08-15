@@ -374,9 +374,9 @@ strong {
   flex-direction: column;
 }
 
-.project:hover {
-  // transform: scale(1.02);
-}
+// .project:hover {
+//   transform: scale(1.02);
+// }
 
 .project-title {
   a {
@@ -397,18 +397,16 @@ strong {
   cursor: pointer;
 }
 
-.project-img-zoomed {
-  position: fixed;
-  max-width: 80vw;
-  max-height: 80vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 400;
-  transition: all 0.2s ease;
+// Project image zoom modal
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-// Project image zoom modal
 .project-img-zoom-modal {
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
@@ -418,6 +416,7 @@ strong {
   right: 0;
   z-index: 300;
   display: none;
+  animation: fadeIn 0.15s linear;
 }
 
 .project-img-zoom-modal-open .project-img-zoom-modal {
@@ -438,6 +437,16 @@ strong {
 
 .project-img-zoom-modal-close:hover {
   color: var(--color-accent);
+}
+
+.project-img-zoom-modal-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 80vh;
+  max-width: 80vw;
+  z-index: 400;
 }
 
 // Project tags
